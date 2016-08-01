@@ -1,0 +1,6 @@
+nav.navbar.navbar-default
+  .container-fluid
+    ul.nav.navbar-nav
+      li = link_to 'Materials', root_path
+      li = link_to 'Materials in JSON', material_sources_path(format: :json)
+      li = link_to 'Add New Material', new_material_source_path

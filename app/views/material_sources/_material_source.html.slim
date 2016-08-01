@@ -1,0 +1,23 @@
+tr
+  td = source.id
+  td
+    => source.duration
+    | sec
+  td
+    p
+      b Title:
+      =< source.title
+    p
+      b Year:
+      =< source.year
+    p
+      b Episode:
+      =< source.episode
+    p
+      b Supplier Info:
+      =< source.supplier_name
+  td = source.created_at.to_formatted_s(:long)
+  td
+    span.label.label-success = link_to 'JSON', material_source_path(source, format: :json)
+    span.label.label-info = link_to 'Edit', edit_material_source_path(source)
+    span.label.label-danger = link_to 'Delete', source, method: :delete

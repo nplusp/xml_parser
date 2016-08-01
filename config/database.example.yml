@@ -1,0 +1,32 @@
+defaults: &defaults
+  adapter: postgresql
+  encoding: unicode
+  username: <%= Rails.application.secrets[:database][:username] %>
+  pool: 5
+
+  # Minimum log levels, in increasing order:
+  #   debug5, debug4, debug3, debug2, debug1,
+  #   log, notice, warning, error, fatal, and panic
+  # The server defaults to notice.
+  min_messages: warning
+
+development:
+  <<: *defaults
+  database: honeycomb_development
+  host: localhost
+
+production:
+  <<: *defaults
+  database: honeycomb_production
+
+staging:
+  <<: *defaults
+  database: honeycomb_staging
+
+test: &test
+  <<: *defaults
+  database: honeycomb_test
+  host: localhost
+
+cucumber:
+  <<: *test

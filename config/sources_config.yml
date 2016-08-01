@@ -1,0 +1,31 @@
+---
+  -
+    supplier_path:
+      - Bskyb
+      - supplierInfo
+    supplier_keys:
+      - supplierName
+    media_path:
+      - Bskyb
+      - mediaInfo
+    media_keys:
+      - title
+      - episode
+      - year
+      - duration
+      - aspectRatio
+  -
+    supplier_path:
+      - BSkyB
+      - supplierInfo
+    supplier_keys:
+      - supplierInfo
+    media_path:
+      - BSkyB
+      - mediaInfo
+    media_keys:
+      - title
+      - episode
+      - year
+      - duration
+      - aspectRatio
